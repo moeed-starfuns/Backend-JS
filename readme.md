@@ -19,20 +19,31 @@ This is a readme File
    > Use mongoCompas > copy url > remove last '/' from url
 
 5. Install express,mongoose, dotenv (for loading variables from environment variable)
-6. Always use Async, await and try catch for database because it will handle issues
-   if response is slow or DB is in another continent
+6. Always use Async, await and try catch for database because it will handle
+   issues if response is slow or DB is in another continent
 
-7. CORS: Cross Origin Resource Sharing > This is used to control access to the server
+7. CORS: Cross Origin Resource Sharing > This is used to control access to the
+   server
    npm i CORS
 
-8. cookie-parser > Used to access browser cookies of user from server and to set them
-   (perform crud operations on them)
+8. cookie-parser > Used to access browser cookies of user from server and to 
+   set them (perform crud operations on them)
 
 9. Middlewares > check if user is valid to access the requested page
-   for example > if i request a FB page/resource and i am required to be logged in
-   to FB to access that resource, this checking whether i am logged in or not is performed by middleware
+   for example > if i request a FB page/resource and i am required to be logged in to FB to access that resource, this checking whether i am logged in or not is performed by middleware
 
-10. Higher Order function > Function that accept another function as parameter or pass
-    a function in return
+10. Higher Order function > Function that accept another function as parameter 
+    or pass a function in return
 
 11. app.use of express is mostly used for middleware
+
+12. Allow you to write aggregation queries
+    npm i mongoose-aggregate-paginate-v2
+
+13. bcrypt > Store data like passwords in encrypted form
+    npm i bcrypt
+
+14. jsonwebtoken > used for generating tokens
+    npm i jsonwebtoken
+
+both 13,14 are used in user.model.js file

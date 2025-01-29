@@ -20,5 +20,3 @@ connectDB()
     console.log("Connection with DB is Failed", error);
   });
 
-
-  export default ApiError
