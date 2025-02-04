@@ -47,3 +47,6 @@ This is a readme File
     npm i jsonwebtoken
 
 both 13,14 are used in user.model.js file
+
+15. cloudinary and multer > Used for uploading files 
+    npm i cloudinary multer

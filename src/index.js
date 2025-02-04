@@ -1,9 +1,11 @@
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
+import app from "./app.js";
 //  Require(dotenv) will not work because its supported in common type and we are in module type
 dotenv.config({
   path: "./env",
 });
+
 //Then add a line in dev scripts of package.json
 // -r dotenv/config --experimental-json-modules
 

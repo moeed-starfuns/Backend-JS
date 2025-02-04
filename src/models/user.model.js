@@ -81,17 +81,17 @@ UserSchema.methods.generateAccessToken = async function () {
 };
 
 UserSchema.methods.generateRefreshToken = async function () {
-    jwt.sign(
-        // for generating refresh token these 3 thigns are required
-        // payload, accesstoken, accesstokenexpiry
-        {
-          _id: this._id,
-        },
-        process.env.REFRESH_TOKEN_SECRET,
-        {
-          expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
-        }
-      );
+  jwt.sign(
+    // for generating refresh token these 3 thigns are required
+    // payload, accesstoken, refreshtokenexpiry
+    {
+      _id: this._id,
+    },
+    process.env.REFRESH_TOKEN_SECRET,
+    {
+      expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
+    }
+  );
 };
 
 export const User = mongoose.model("User", UserSchema);

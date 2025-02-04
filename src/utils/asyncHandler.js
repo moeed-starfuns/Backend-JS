@@ -1,12 +1,15 @@
 // 2ND Approach mostly used
 
 const asyncHandler = (requestHandler) => {
-  (req, res, next) => {
+  // Always use return it will return the function where we use asyncHandler
+  return (req, res, next) => {
     Promise.resolve(requestHandler(req, res, next)).catch((err) => {
       next(err);
     });
   };
 };
+
+export default asyncHandler;
 
 //FIRST APPROACH
 // const asyncHandler = (fn) => async (req, res, next) => {
